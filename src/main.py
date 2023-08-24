@@ -1,7 +1,11 @@
 import os
 
+
 class File:
+    """A class to represent a File and operations performed on said file"""
+
     def __init__(self, file_path) -> None:
+        """Construct file path attribute for the File object"""
         self.file_path = file_path
 
     def is_directory(self) -> bool:
@@ -18,8 +22,11 @@ class File:
 
     @staticmethod
     def sort_dict_values_desc(dictionary) -> dict:
-        """Takes Dictionary and sorts entries based on values in descending order"""
-        # takes tuple [(key,value),..] from dic.items() and extracts the value
+        """
+        Takes Dictionary and sorts entries based on values in descending order
+        In the lambda, the value is extracted and sorted from the tuple [(key,value),..]
+        """
+        # takes tuple  from dic.items() and extracts the value
         return dict(sorted(dictionary.items(), key=lambda x: x[1], reverse=True))
 
     @staticmethod
